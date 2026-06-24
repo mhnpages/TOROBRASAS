@@ -213,6 +213,33 @@ button, .btn { cursor: pointer; border: none; outline: none; font-family: var(--
 .btn-wa:hover { background: #1da851; transform: translateY(-2px); box-shadow: 0 8px 32px rgba(37,211,102,0.45); }
 .btn-wa svg { position: relative; z-index: 1; }
 
+.menu-completo-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 36px 32px;
+  border: 1px solid rgba(245,200,66,0.25);
+  border-radius: 28px;
+  background: rgba(16, 12, 8, 0.45);
+}
+
+.menu-completo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: flex-end;
+}
+
+.menu-completo-box .section-title {
+  margin-bottom: 24px;
+}
+
+.menu-completo-box .section-sub {
+  max-width: 540px;
+}
+
 /* ═══════════════════════════════════════════
    HEADER
 ═══════════════════════════════════════════ */
@@ -1293,8 +1320,8 @@ footer {
 <section id="cotizar">
   <div class="container">
     <div class="section-label">Cotizador</div>
-    <h2 class="section-title reveal">COTIZA TU <span>EVENTO</span></h2>
-    <p class="section-sub reveal">El menú de adultos incluye entrada, plato fuerte, 2 guarniciones, postre y 2 refrescos por persona. 
+    <h2 class="section-title reveal">COTIZA TU <span>EVENTO min. 30 personas</span></h2>
+    <p class="section-sub reveal">El menú para eventos de más de 30 personas; incluye entrada, plato fuerte, 2 guarniciones, postre y 2 refrescos por persona. 
       Llena el formulario y recibe una propuesta personalizada por WhatsApp al instante.</p>
     <div class="calc-layout">
       <div class="calc-form-wrap reveal">
@@ -1408,37 +1435,42 @@ footer {
 ============================================================ -->
 <section id="menus">
   <div class="container">
-    <div class="section-label">Para los adultos</div>
-    <h2 class="section-title reveal">MENÚS PARA <span>EVENTOS</span></h2>
-    <p class="section-sub reveal">Selecciona el menú que mejor se adapte a tu tipo de evento y presupuesto.</p>
+    <div class="section-label">Reuniones para menos de 30 personas</div>
+    <h2 class="section-title reveal">MENÚ<span> A LA CARTA</span></h2>
+    <p class="section-sub reveal">Selecciona las opciones a la carta si vienes con menos de 30 personas y un presupuesto definido. Nuestro menú es mucho más amplio, aquí puedes encontrar algunas de las mejores opciones y los platos más pedidos de la casa</p>
     <!-- TABS -->
     <div class="tabs-nav reveal">
-      <button class="tab-btn active" onclick="switchTab('clasico')">Clásico</button>
-      <button class="tab-btn" onclick="switchTab('parrillero')">Parrillero</button>
-      <button class="tab-btn" onclick="switchTab('premium')">Premium</button>
-      <button class="tab-btn" onclick="switchTab('mar')">Combinado</button>
+      <button class="tab-btn active" onclick="switchTab('clasico')">PREMIUM</button>
+      <button class="tab-btn" onclick="switchTab('parrillero')">MARISCOS</button>
+      <button class="tab-btn" onclick="switchTab('premium')">AVES Y CERDO</button>
+      <button class="tab-btn" onclick="switchTab('mar')">PARRILLADAS</button>
     </div>
     <!-- TAB: CLÁSICO -->
     <div class="tab-panel active" id="tab-clasico">
       <div class="menu-panel-grid">
         <div class="menu-panel-card">
           <div class="mpc-header">
-            <div class="mpc-title">MENÚ GOURMET</div>
-            <div class="mpc-subtitle">Incluye Entrada, Plato Principal, Postre y 2 refrescos por persona</div>
+            <div class="mpc-title">MENÚ PREMIUM RES</div>
+            <div class="mpc-subtitle">Las siguientes opciones son únicamente plato fuerte, NO incluye entrada, postre ni refrescos.</div>
           </div>
           <div class="mpc-items">
-            <div class="mpc-item"><span class="mpc-item-name">🍗 Pollo a la Parrilla o al Vino</span><span class="mpc-item-price">L 600</span></div>
+            <div class="mpc-item"><span class="mpc-item-name">TORO STEAK</span><span class="mpc-item-price">L 585</span></div>
+            <div class="mpc-item"><span class="mpc-item-name">TROZO EL TORO</span><span class="mpc-item-price">L 585</span></div>
+            <div class="mpc-item"><span class="mpc-item-name">EL TROCITO</span><span class="mpc-item-price">L 540</span></div>
+            <div class="mpc-item"><span class="mpc-item-name">CHURRASCO 8onzas</span><span class="mpc-item-price">L 450</span></div>
+            <div class="mpc-item"><span class="mpc-item-name">CHURRASCO 12onzas</span><span class="mpc-item-price">L 485</span></div>
+            <div class="mpc-item"><span class="mpc-item-name">FILET MIGÑON</span><span class="mpc-item-price">L 595</span></div>
           </div>
         </div>
         <div class="menu-panel-card">
           <div class="mpc-header" style="background:linear-gradient(135deg,rgba(61,43,31,0.5),rgba(17,16,9,0.3))">
-            <div class="mpc-title">¿Por qué el Gourmet?</div>
+            <div class="mpc-title">¿Por qué el Premium RES?</div>
           </div>
           <div class="mpc-items" style="padding:20px">
-            <p style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:16px">El Menú Gourmet es la opción más elaborada y deliciosa. Perfecto para eventos especiales donde se busca una experiencia culinaria excepcional.</p>
+            <p style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:16px">El Menú Premium es la opción más elaborada y deliciosa. Los cortes especiales del Chef, son Perfectos para celebrar ocasiones especiales donde se busca una experiencia culinaria excepcional.</p>
             <div style="display:flex;flex-direction:column;gap:8px">
               <span class="tag">✓ Sabor premium</span>
-              <span class="tag">✓ Eventos especiales</span>
+              <span class="tag">✓ Ocasiones especiales</span>
               <span class="tag">✓ Clientes exigentes</span>
             </div>
           </div>
@@ -1450,22 +1482,26 @@ footer {
       <div class="menu-panel-grid">
         <div class="menu-panel-card">
           <div class="mpc-header">
-            <div class="mpc-title">MENÚ PARRILLERO</div>
-            <div class="mpc-subtitle">Incluye entrada, Plato Principal, Postre y 2 refrescos por persona</div>
+            <div class="mpc-title">MENÚ MARISCOS</div>
+            <div class="mpc-subtitle">Las siguientes opciones son únicamente plato fuerte, NO incluye entrada, postre ni refrescos</div>
           </div>
           <div class="mpc-items">
-            <div class="mpc-item"><span class="mpc-item-name">🥩 Lomito de Cerdo</span><span class="mpc-item-price">L 600</span></div>
-            <div class="mpc-item"><span class="mpc-item-name">🍖 Costilla de Cerdo</span><span class="mpc-item-price">L 600</span></div>
+            <div class="mpc-item"><span class="mpc-item-name">CAMARONES A LA PARRILLA</span><span class="mpc-item-price">L 450</span></div>
+            <div class="mpc-item"><span class="mpc-item-name">CAMARONES AL AJILLO</span><span class="mpc-item-price">L 450</span></div>
+            <div class="mpc-item"><span class="mpc-item-name">CAMARONES A LA DIABLA</span><span class="mpc-item-price">L 450</span></div>
+            <div class="mpc-item"><span class="mpc-item-name">CAMARONES EMPANIZADOS</span><span class="mpc-item-price">L 450</span></div>
+            <div class="mpc-item"><span class="mpc-item-name">PESCADO FRITO</span><span class="mpc-item-price">L 320</span></div>
+            <div class="mpc-item"><span class="mpc-item-name">FILETE DE PESCADO A LA MENIER</span><span class="mpc-item-price">L 450</span></div>
           </div>
         </div>
         <div class="menu-panel-card">
           <div class="mpc-header" style="background:linear-gradient(135deg,rgba(61,43,31,0.5),rgba(17,16,9,0.3))">
-            <div class="mpc-title">¿Por qué el Parrillero?</div>
+            <div class="mpc-title">¿Por qué el menú mariscos?</div>
           </div>
           <div class="mpc-items" style="padding:20px">
-            <p style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:16px">Para los amantes de la parrilla real. Cortes y combinaciones directamente de las brasas, perfectos para reuniones de adultos, cumpleaños familiares y grupos que disfrutan comer bien.</p>
+            <p style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:16px">Para los amantes de los mariscos y grupos que disfrutan comer bien.</p>
             <div style="display:flex;flex-direction:column;gap:8px">
-              <span class="tag">✓ Sabor auténtico a las brasas</span>
+              <span class="tag">✓ Sabor especial real a la costa</span>
               <span class="tag">✓ Grupos y familias</span>
               <span class="tag">✓ Celebraciones especiales</span>
             </div>
@@ -1478,22 +1514,30 @@ footer {
       <div class="menu-panel-grid">
         <div class="menu-panel-card">
           <div class="mpc-header">
-            <div class="mpc-title">MENÚ PREMIUM</div>
-            <div class="mpc-subtitle">Incluye entrada, Plato Principal, Postre y 2 refrescos por persona</div>
+            <div class="mpc-title">MENÚ CLÁSICO</div>
+            <div class="mpc-subtitle">Las siguientes opciones son ideales para quienes disfrutan de los sabores tradicionales, NO incluyen entrada, postre ni refrescos</div>
           </div>
           <div class="mpc-items">
-            <div class="mpc-item"><span class="mpc-item-name">🥩 Filet Mignon</span><span class="mpc-item-price">L 700</span></div>
+            <div class="mpc-item"><span class="mpc-item-name">FILETE DE POLLO A LA PARRILLA</span><span class="mpc-item-price">L 320</span></div>
+            <div class="mpc-item"><span class="mpc-item-name">FILETE DE POLLO JALAPEÑO</span><span class="mpc-item-price">L 350</span></div>
+            <div class="mpc-item"><span class="mpc-item-name">CHULETA DE CERDO A LA PARRILLA</span><span class="mpc-item-price">L 300</span></div>
+            <div class="mpc-item"><span class="mpc-item-name">COSTILLA DE CERDO A LA PARRILLA</span><span class="mpc-item-price">L 350</span></div>
+            <div class="mpc-item"><span class="mpc-item-name">LOMITO DE CERDO A LA PARRILLA</span><span class="mpc-item-price">L 350</span></div>
+            <div class="mpc-item"><span class="mpc-item-name">FILETE DE RES Y CHORIZO</span><span class="mpc-item-price">L 395</span></div>
+            <div class="mpc-item"><span class="mpc-item-name">FILETE DE RES Y POLLO</span><span class="mpc-item-price">L 395</span></div>
+            <div class="mpc-item"><span class="mpc-item-name">COSTILLA DE CERDO Y FILETE DE POLLO</span><span class="mpc-item-price">L 380</span></div>
           </div>
+
         </div>
         <div class="menu-panel-card">
           <div class="mpc-header" style="background:linear-gradient(135deg,rgba(61,43,31,0.5),rgba(17,16,9,0.3))">
-            <div class="mpc-title">¿Por qué el Premium?</div>
+            <div class="mpc-title">¿Por qué el Clásico?</div>
           </div>
           <div class="mpc-items" style="padding:20px">
-            <p style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:16px">El Mejor corte del chef, servidos en el ambiente más especial. Diseñado para bodas, quinceaños y eventos donde la experiencia gastronómica marca la diferencia.</p>
+            <p style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:16px">La experiencia más tradicional y completa para quienes valoran la calidad y el sabor auténtico.</p>
             <div style="display:flex;flex-direction:column;gap:8px">
               <span class="tag">✓ Cortes de alta calidad</span>
-              <span class="tag">✓ Bodas y quinceaños</span>
+              <span class="tag">✓ Sabor auténtico</span>
               <span class="tag">✓ Experiencia gourmet</span>
             </div>
           </div>
@@ -1505,27 +1549,47 @@ footer {
       <div class="menu-panel-grid">
         <div class="menu-panel-card">
           <div class="mpc-header">
-            <div class="mpc-title">Menú Combinado</div>
-            <div class="mpc-subtitle">Incluye entrada, Plato Principal, Postre y 2 refrescos por persona</div>
+            <div class="mpc-title">MENÚ PARRILLADAS</div>
+            <div class="mpc-subtitle">Ideales para grupos grandes amantes de probar un poco de todo, las siguientes opciones NO incluyen entrada, ni postre ni refrescos.</div>
           </div>
           <div class="mpc-items">
-            <div class="mpc-item"><span class="mpc-item-name"> Pollo y Res</span><span class="mpc-item-price">L 600</span></div>
-            <div class="mpc-item"><span class="mpc-item-name"> Lomito de Cerdo y Filete de Pollo</span><span class="mpc-item-price">L 600</span></div>
+            <div class="mpc-item"><span class="mpc-item-name"> PARRILLADA EL TERNERO (4 personas)</span><span class="mpc-item-price">L 1,695</span></div>
+            <div class="mpc-item"><span class="mpc-item-name"> PARRILLADA EL TORETE (6 personas)</span><span class="mpc-item-price">L 2,425</span></div>
+            <div class="mpc-item"><span class="mpc-item-name"> GRAN PARRILLADA EL TORO (10 personas)</span><span class="mpc-item-price">L 3,745</span></div>
           </div>
         </div>
         <div class="menu-panel-card">
           <div class="mpc-header" style="background:linear-gradient(135deg,rgba(61,43,31,0.5),rgba(17,16,9,0.3))">
-            <div class="mpc-title">¿Por qué el combinado?</div>
+            <div class="mpc-title">¿Por qué las parrilladas?</div>
           </div>
           <div class="mpc-items" style="padding:20px">
-            <p style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:16px">La combinación más elegante: lo mejor en cortes y lo mejor de la parrilla en un mismo evento. Para celebraciones donde quieres ofrecer algo verdaderamente especial.</p>
+            <p style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:16px">La combinación más completa: lo mejor en cortes y lo mejor de la parrilla en un mismo plato, Para celebraciones donde quieres ofrecer algo verdaderamente especial.</p>
             <div style="display:flex;flex-direction:column;gap:8px">
               <span class="tag">✓ Combinación de sabores</span>
-              <span class="tag">✓ Eventos exclusivos</span>
-              <span class="tag">✓ Bodas premium</span>
+              <span class="tag">✓ Gustos exclusivos</span>
+              <span class="tag">✓ Sabores premium</span>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+  SECCIÓN: MENÚ COMPLETO CTA
+============================================================ -->
+<section id="menu-completo-cta">
+  <div class="container">
+    <div class="menu-completo-box reveal">
+      <div>
+        <div class="section-label">Menú completo</div>
+        <h2 class="section-title">¿Quieres ver el menú completo?</h2>
+        <p class="section-sub">Haz click en cualquiera de las hojas del menú para ver el listado completo. Nuestro horario es de Lunes a Domingo de 10am a 6pm.</p>
+      </div>
+      <div class="menu-completo-actions">
+        <a class="btn-primary" href="./img/menuhoja1.png" target="_blank" rel="noopener">Ver hoja 1</a>
+        <a class="btn-outline" href="./img/menuhoja2.png" target="_blank" rel="noopener">Ver hoja 2</a>
       </div>
     </div>
   </div>
