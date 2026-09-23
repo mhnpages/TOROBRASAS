@@ -10,7 +10,7 @@ Publicación en GitHub Pages:
 3. Activa GitHub Pages desde Settings > Pages.
 
 Datos comerciales configurados:
-- WhatsApp: +504 3362-0240
+- WhatsApp: +504 9374-8893
 - Ubicación: Km 9, carretera a Santa Lucía
 - Horario: lunes a domingo, 10:00 a. m. a 6:00 p. m.
 
